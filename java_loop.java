@@ -6,19 +6,35 @@ public class java_loop {
 
 
         // print star 
+        // int n=sc.nextInt();
+        // int i=1;
+
+        // while(i<=n){
+
+        //     for(int j=1; j<=i; j++){
+
+        //         System.out.print("*");
+
+        //     }
+        //     i++;
+        //     System.out.println();
+        // }
+
+         // print inverted star 
         int n=sc.nextInt();
         int i=1;
 
         while(i<=n){
 
-            for(int j=1; j<=i; j++){
+            for(int j=1; j<=n; j++){
 
                 System.out.print("*");
 
             }
-            i++;
+            n--;
             System.out.println();
         }
+
 
     }
     
