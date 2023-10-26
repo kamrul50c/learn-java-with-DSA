@@ -2,29 +2,33 @@ import java.util.*;
 public class java_function {
     public static void main(String args[]){     // main function //
            
-
-        //function overloding more functions can have the same //
-
-        p("hello coders");
-
-        p(15+50);
-        p(10.5*5);
-
-
-
-
-
-
+    inrngprime(100);
+   // System.out.println(isprime(4));
         }
 
-        public static void p(String st){
-            System.out.println(st);
+        public static void inrngprime(int num){
+
+            for(int i=2; i<=num; ++i){
+
+                if(isprime(i)){
+
+                    System.out.print(i+" ");
+                }
+            }
+            System.out.println();
         }
 
-        public static void p(int num){
-            System.out.println(num);
+public static boolean isprime(int num){
+
+
+    boolean isprime=true;
+    for(int i=2; i<=Math.sqrt(num); ++i){
+        if(num % i==0){
+            isprime=false;
+            break;
         }
-        public static void p(double num){
-            System.out.println(num);
-        }
+    }
+    return isprime;
+}
+        
 }
