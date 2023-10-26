@@ -21,19 +21,50 @@ public class java_loop {
         // }
 
          // print inverted star 
+        // int n=sc.nextInt();
+        // int i=1;
+
+        // while(i<=n){
+
+        //     for(int j=1; j<=n; j++){
+
+        //         System.out.print("*");
+
+        //     }
+        //     n--;
+        //     System.out.println();
+        // }
+
+
+        // print prime number 
+
         int n=sc.nextInt();
-        int i=1;
+        int i=2;
+        
 
         while(i<=n){
 
-            for(int j=1; j<=n; j++){
+           boolean isprime=true;
 
-                System.out.print("*");
+            for(int j=2; j<i; ++j){
+
+                 
+
+                if(i % j == 0){
+
+                    isprime=false;
+                         break;
+                }
 
             }
-            n--;
-            System.out.println();
+        if(isprime){  
+         System.out.print("  "+ i);
         }
+            
+         ++i;
+        }
+
+        
 
 
     }
