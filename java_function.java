@@ -1,43 +1,30 @@
 import java.util.*;
 public class java_function {
     public static void main(String args[]){     // main function //
-// falculate factorial using function
+           
 
-System.out.println(calfac(7));
+        //function overloding more functions can have the same //
 
-// calculate binomial coefficient formula =  n! / {r!*(n-r)!}
+        p("hello coders");
 
-  Scanner sc=new Scanner(System.in);
-    
-  int n=sc.nextInt();
-  int r=sc.nextInt();
-
-  System.out.println(binomial_coefficient(n, r));
+        p(15+50);
+        p(10.5*5);
 
 
-   
 
-        
-    }
-    
-    public static long calfac(int n){    /// user define function 
 
-        long  stroge=1;
 
-        for(int i=1; i<=n; i++){
-            stroge*=i;
 
-            
         }
-        return stroge;
-    }
 
-    public static long binomial_coefficient(int a, int b){
+        public static void p(String st){
+            System.out.println(st);
+        }
 
-        long fac_n=calfac(a);
-        long fac_r=calfac(b);
-        long fac_nmr=calfac(a-b);
-        return fac_n/(fac_r*fac_nmr);
-
-    }
+        public static void p(int num){
+            System.out.println(num);
+        }
+        public static void p(double num){
+            System.out.println(num);
+        }
 }
