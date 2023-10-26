@@ -1,34 +1,23 @@
 import java.util.*;
 public class java_function {
     public static void main(String args[]){     // main function //
-           
-    inrngprime(100);
-   // System.out.println(isprime(4));
+        // binary to decimal using user define function:    
+       System.out.println(btod(101));
+   
         }
 
-        public static void inrngprime(int num){
+        public static int btod(int num){
+            int result=0;
+            int i=0;
 
-            for(int i=2; i<=num; ++i){
-
-                if(isprime(i)){
-
-                    System.out.print(i+" ");
-                }
+            while(num>=1){
+                
+               
+                 result += (num % 10)*(int)Math.pow(2, i);
+                num/=10;
+                ++i;
             }
-            System.out.println();
+            return result;
         }
 
-public static boolean isprime(int num){
-
-
-    boolean isprime=true;
-    for(int i=2; i<=Math.sqrt(num); ++i){
-        if(num % i==0){
-            isprime=false;
-            break;
-        }
-    }
-    return isprime;
-}
-        
 }
