@@ -1,31 +1,25 @@
 import java.util.*;
 public class advance_pattern {
 
-    public static void pattern(int row, int col){
+    public static void pattern(int n){
 
-        for(int i=1; i<=row; i++){
+        for(int i=1; i<=n; i++){
 
-            for(int j=1; j<=col; j++){
+            for(int j=1; j<=(n-i); j++){
 
-                if(i==1 || j==1 || i==row || j==col){
-
-                    System.out.print("*");
-                }else{
-                    System.out.print(" ");
-                }
-
+                System.out.print(" ");
             }
-            System.err.println( );
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+
+            System.out.println();
         }
     }
 
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         int row=sc.nextInt();
-        int col=sc.nextInt();
-
-        pattern(row,col);
-
-
+        pattern(row);
     }
 }
