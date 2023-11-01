@@ -1,5 +1,7 @@
 import java.util.*;
 
+import javax.xml.transform.stax.StAXResult;
+
 public class max_sub_arrary_sum {
 
 
@@ -11,10 +13,11 @@ public class max_sub_arrary_sum {
 
     array_input(box);
 
+    
+
     //calll
 
-   
-  System.out.println(max_sub_arry_sum(box));
+ System.out.println(max_sub_arry_sum(box));
 
 
    }
@@ -29,16 +32,25 @@ public class max_sub_arrary_sum {
    
     public static int  max_sub_arry_sum(int array[]){
         int max=Integer.MIN_VALUE;
-   
-        for(int i=0; i<array.length; i++){
+        int current=0;
 
-            for(int j=i;j<array.length; j++){
-                int current=0;
+        int pre_fix_sum[]=new int [array.length];
+        pre_fix_sum[0]=array[0];
+   
+        for(int i=1; i<array.length; i++){
+            pre_fix_sum[i]=pre_fix_sum[i-1]+array[i];
+        }
+
+
+             for(int j=0;j<array.length; j++){
+                int start=j;
+                
                
 
-                for(int k=i; k<=j; k++){
-                   // System.out.print(" " +array[k]);
-                    current +=array[k];
+                 for(int k=j; k<array.length; k++){
+                    int end=k;
+                
+                current=(start==0)?pre_fix_sum[end]:pre_fix_sum[end]-pre_fix_sum[start-1];
 
 
                 }
@@ -49,7 +61,16 @@ public class max_sub_arrary_sum {
             }
             
             //System.out.println(  );
-        }
+        
+        
          return max;
     }
+
+    // public static void array_output(int array[]){
+    //     for(int i=0; i<array.length; i++){
+
+    //         System.err.print(array[i]+" ");
+    //     }
+    //     System.err.println();
+    // }
 }
