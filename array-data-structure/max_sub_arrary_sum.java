@@ -17,7 +17,7 @@ public class max_sub_arrary_sum {
 
     //calll
 
- System.out.println(max_sub_arry_sum(box));
+ System.out.println(max_sub_arrary_sum_kadanes_al(box));
 
 
    }
@@ -30,41 +30,41 @@ public class max_sub_arrary_sum {
         }
     }
    
-    public static int  max_sub_arry_sum(int array[]){
-        int max=Integer.MIN_VALUE;
-        int current=0;
+    // public static int  max_sub_arry_sum(int array[]){
+    //     int max=Integer.MIN_VALUE;
+    //     int current=0;
 
-        int pre_fix_sum[]=new int [array.length];
-        pre_fix_sum[0]=array[0];
+    //     int pre_fix_sum[]=new int [array.length];
+    //     pre_fix_sum[0]=array[0];
    
-        for(int i=1; i<array.length; i++){
-            pre_fix_sum[i]=pre_fix_sum[i-1]+array[i];
-        }
+    //     for(int i=1; i<array.length; i++){
+    //         pre_fix_sum[i]=pre_fix_sum[i-1]+array[i];
+    //     }
 
 
-             for(int j=0;j<array.length; j++){
-                int start=j;
+    //          for(int j=0;j<array.length; j++){
+    //             int start=j;
                 
                
 
-                 for(int k=j; k<array.length; k++){
-                    int end=k;
+    //              for(int k=j; k<array.length; k++){
+    //                 int end=k;
                 
-                current=(start==0)?pre_fix_sum[end]:pre_fix_sum[end]-pre_fix_sum[start-1];
+    //             current=(start==0)?pre_fix_sum[end]:pre_fix_sum[end]-pre_fix_sum[start-1];
 
 
-                }
-                if(current>max){
-                    max=current;
-                }
+    //             }
+    //             if(current>max){
+    //                 max=current;
+    //             }
                
-            }
+    //         }
             
-            //System.out.println(  );
+    //         //System.out.println(  );
         
         
-         return max;
-    }
+    //      return max;
+    // }
 
     // public static void array_output(int array[]){
     //     for(int i=0; i<array.length; i++){
@@ -73,4 +73,16 @@ public class max_sub_arrary_sum {
     //     }
     //     System.err.println();
     // }
+
+    public static int max_sub_arrary_sum_kadanes_al(int array[]){
+        int max=Integer.MIN_VALUE;
+        int corrent_sum=0;
+        for(int i=0; i<array.length; i++){
+
+            corrent_sum+=array[i];
+            corrent_sum=(corrent_sum<0)?0:corrent_sum;
+           max=Math.max(max, corrent_sum);
+        }
+        return max;
+    }
 }
