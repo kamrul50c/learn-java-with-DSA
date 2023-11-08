@@ -14,14 +14,20 @@ public class diogonal_sum {
 
     }
     public static int diogonalsum(int array[][]){
-        int sum=0; 
+      int sum=0; 
+        // for(int i=0; i<array.length; i++){
+        //     for(int j=0; j<array[0].length; j++){
+        //         if(i==j){
+        //             sum+=array[i][j];
+        //         }else if(i+j==(array.length-1)){
+        //             sum+=array[i][j];
+        //         }
+        //     }
+        // }
         for(int i=0; i<array.length; i++){
-            for(int j=0; j<array[0].length; j++){
-                if(i==j){
-                    sum+=array[i][j];
-                }else if(i+j==(array.length-1)){
-                    sum+=array[i][j];
-                }
+            sum+=array[i][i];
+            if(i!= array.length-1-i){
+            sum+=array[i][array.length-1-i];
             }
         }
         return sum;
