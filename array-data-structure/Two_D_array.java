@@ -11,6 +11,8 @@ public class Two_D_array {
         //
       //  out(array);
 
+      /*The array.length property returns the number of rows in the array. The array[0].length property returns the number of columns in the first row of the array */
+
         //
         transpose_matrix(array);
     
