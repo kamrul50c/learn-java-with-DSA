@@ -28,7 +28,9 @@ nextLine() method. */
          
 
 // string_compare(fullname,st_1);
-System.out.println(substring(fullname, 1, 4));
+//System.out.println(substring(fullname, 1, 4));
+// sub string built in function
+  System.out.println(fullname.substring(1, 5));
 
         
         
