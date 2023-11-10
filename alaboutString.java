@@ -19,14 +19,15 @@ nextLine() method. */
         fullname=sc.nextLine();
 
 
-        System.out.println(fullname.length());
+     //   System.out.println(fullname.length());
          // concation
 
-         System.out.println("hello "+name);
+     //    System.out.println("hello "+name);
 
-         charatmethod(fullname);
+        // charatmethod(fullname);
+         
 
-
+ string_compare(fullname,st_1);
         
         
      }
@@ -34,6 +35,14 @@ nextLine() method. */
      public static void charatmethod(String st){
           for(int i=0; i<st.length(); i++){
                System.out.print(st.charAt(i)+" ");
+          }
+     }
+
+     public static void string_compare(String st ,String st1){
+          if(st.equals(st1)){
+               System.out.println("string are equal");
+          }else{
+               System.out.println("string are not equal");
           }
      }
 }
