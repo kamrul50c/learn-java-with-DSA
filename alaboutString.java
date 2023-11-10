@@ -27,7 +27,9 @@ nextLine() method. */
         // charatmethod(fullname);
          
 
- string_compare(fullname,st_1);
+// string_compare(fullname,st_1);
+System.out.println(substring(fullname, 1, 4));
+
         
         
      }
@@ -44,5 +46,13 @@ nextLine() method. */
           }else{
                System.out.println("string are not equal");
           }
+     }
+
+     public static String substring(String st, int si, int ei){
+          String subStr="";
+          for(int i=si; i<ei; i++){
+               subStr+=st.charAt(i);
+          }
+          return subStr;
      }
 }
