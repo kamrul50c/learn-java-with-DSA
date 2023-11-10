@@ -1,0 +1,39 @@
+import java .util.*;
+public class alaboutString {
+
+     public static void main(String args[]){
+        char ch[]={'s','a','i','m','o','n'};
+        String st="saimon";
+        String st_1=new String("saimon");
+
+        // string are immutable//
+        Scanner sc=new Scanner(System.in);
+
+        String name,fullname;
+        name=sc.next();
+        /*Scanner class in Java leaves the newline character in the input buffer after the next() method is called. This can cause problems when the nextLine() method is called next, as it will read the newline character as a new line, resulting in an empty string being assigned to the variable.
+
+The solution is to consume the newline character before calling the 
+nextLine() method. */
+        sc.nextLine();
+        fullname=sc.nextLine();
+
+
+        System.out.println(fullname.length());
+         // concation
+
+         System.out.println("hello "+name);
+
+         charatmethod(fullname);
+
+
+        
+        
+     }
+
+     public static void charatmethod(String st){
+          for(int i=0; i<st.length(); i++){
+               System.out.print(st.charAt(i)+" ");
+          }
+     }
+}
