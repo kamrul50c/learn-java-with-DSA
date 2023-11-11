@@ -10,14 +10,14 @@ public class String_compression {
         StringBuilder sb=new StringBuilder("");
         
         for(int i=0; i<st.length(); i++){
-            int counter=1;
+            Integer counter=1;
             while(i<st.length()-1 && st.charAt(i) == st.charAt(i+1)){
                 counter++;
                 i++;
             } 
             sb.append(st.charAt(i)); 
             if(counter>1){
-                sb.append(counter);
+                sb.append(counter.toString());
             }
         }
         return sb.toString();
